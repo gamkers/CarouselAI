@@ -1,7 +1,18 @@
 {
-  "name": "carousel_creator",
-  "version": "0.1.0",
+  "homepage": "http://post.gamkers.in",
+  "name": "vite-react-typescript-starter",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "dev": "vite",
+    "build": "vite build --sourcemap",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@dhiwise/component-tagger": "^1.0.9",
     "@reduxjs/toolkit": "^2.6.1",
@@ -26,11 +37,6 @@
     "tailwindcss-animate": "^1.0.7",
     "tailwindcss-elevation": "^2.0.0",
     "tailwindcss-fluid-type": "^2.0.7"
-  },
-  "scripts": {
-    "start": "vite",
-    "build": "vite build --sourcemap",
-    "serve": "vite preview"
   },
   "eslintConfig": {
     "extends": [
@@ -57,6 +63,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "@vitejs/plugin-react": "4.3.4",
     "autoprefixer": "10.4.2",
+    "gh-pages": "^6.3.0",
     "postcss": "8.4.8",
     "tailwindcss": "3.4.6",
     "vite": "5.0.0",
