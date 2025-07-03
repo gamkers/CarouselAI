@@ -9,7 +9,7 @@ import QuestionnaireResponseSummary from './components/QuestionnaireResponseSumm
 import CarouselPreviewGallery from './components/CarouselPreviewGallery';
 import GenerationLoadingState from './components/GenerationLoadingState';
 
-const API_BASE = 'http://31.97.60.127:5000';
+const API_BASE = 'https://postapi.gamkers.in:8443';
 
 const ContentGenerationPreview = () => {
   const navigate = useNavigate();
