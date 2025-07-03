@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --color-primary: #2563EB; /* Confident blue (primary) - blue-600 */
+    --color-primary-50: #EFF6FF; /* Light blue (50-level shade) - blue-50 */
+    --color-primary-100: #DBEAFE; /* Light blue (100-level shade) - blue-100 */
+    --color-primary-500: #3B82F6; /* Medium blue (500-level shade) - blue-500 */
+    --color-primary-700: #1D4ED8; /* Dark blue (700-level shade) - blue-700 */
+    
+    /* Secondary Colors */
+    --color-secondary: #64748B; /* Sophisticated slate (secondary) - slate-500 */
+    --color-secondary-100: #F1F5F9; /* Light slate (100-level shade) - slate-100 */
+    --color-secondary-200: #E2E8F0; /* Light slate (200-level shade) - slate-200 */
+    --color-secondary-400: #94A3B8; /* Medium slate (400-level shade) - slate-400 */
+    --color-secondary-600: #475569; /* Dark slate (600-level shade) - slate-600 */
+    
+    /* Accent Colors */
+    --color-accent: #F59E0B; /* Energetic amber (accent) - amber-500 */
+    --color-accent-100: #FEF3C7; /* Light amber (100-level shade) - amber-100 */
+    --color-accent-600: #D97706; /* Dark amber (600-level shade) - amber-600 */
+    
+    /* Background Colors */
+    --color-background: #FAFAFA; /* Soft off-white (background) - gray-50 */
+    --color-surface: #FFFFFF; /* Pure white (surface) - white */
+    
+    /* Text Colors */
+    --color-text-primary: #1E293B; /* Rich charcoal (text-primary) - slate-800 */
+    --color-text-secondary: #64748B; /* Muted slate (text-secondary) - slate-500 */
+    
+    /* Status Colors */
+    --color-success: #10B981; /* Fresh emerald (success) - emerald-500 */
+    --color-success-100: #D1FAE5; /* Light emerald (100-level shade) - emerald-100 */
+    --color-warning: #F59E0B; /* Consistent amber (warning) - amber-500 */
+    --color-warning-100: #FEF3C7; /* Light amber (100-level shade) - amber-100 */
+    --color-error: #EF4444; /* Clear red (error) - red-500 */
+    --color-error-100: #FEE2E2; /* Light red (100-level shade) - red-100 */
+    
+    /* Border Colors */
+    --color-border: #E2E8F0; /* Minimal border (border) - slate-200 */
+    --color-border-focus: #2563EB; /* Focus border (border-focus) - blue-600 */
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Animation utilities */
+  .animate-shimmer {
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: calc(200px + 100%) 0;
+    }
+  }
+
+  /* Micro-interaction utilities */
+  .micro-scale {
+    transition: transform 150ms ease-out, opacity 150ms ease-out;
+  }
+
+  .micro-scale:active {
+    transform: scale(0.98);
+  }
+
+  /* Spring animation utility */
+  .spring-transition {
+    transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  /* Elevation shadows */
+  .elevation-1 {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .elevation-2 {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .elevation-3 {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+}
